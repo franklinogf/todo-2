@@ -1,5 +1,57 @@
+import { Button } from '@/components/ui/button'
+import { Input } from './components/ui/input'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card'
+
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableRow
+} from '@/components/ui/table'
+
 function App () {
-  return <h1 className='text-3xl font-bold'>Hola</h1>
+  return (
+    <main className='h-dvh grid place-content-center'>
+      <header>
+        <h1 className='text-3xl font-bold'>Todo list</h1>
+      </header>
+      <section>
+        <Card className='max-w-[500px]'>
+          <CardHeader>
+            <CardTitle>Franklin todo list</CardTitle>
+            <CardDescription>This is what you have for today</CardDescription>
+          </CardHeader>
+          <CardContent className='flex gap-3 justify-between'>
+            <Input type='text' placeholder='What do i have to do?' />
+            <Button>Add</Button>
+          </CardContent>
+          <CardContent>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell>
+                    <input type='checkbox' name='' id='' />
+                  </TableCell>
+                  <TableCell>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ullam. lorem
+                  </TableCell>
+                  <TableCell>
+                    <Button variant='ghost'>X</Button>
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
+  )
 }
 
 export default App
